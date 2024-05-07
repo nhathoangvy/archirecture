@@ -1,0 +1,44 @@
+read-only/V530EVw3jrp2 https://grafana.gsm-api.net/login
+
+https://admin-customer.gsm-api.net/ v.hoangvn3@vinfast.vn / wYj6^4*G
+
+
+redis://broacastingServiceId:O23qpqUlIVTl5l6B@replica.broadcast-service-redis-prod.0cfwbf.apse1.cache.amazonaws.com:6379/0
+redis-cli replica.broadcast-service-redis-prod.0cfwbf.apse1.cache.amazonaws.com -p 6379 --tls
+AUTH broacastingServiceId O23qpqUlIVTl5l6B
+redis-cli6 install:
+
+wget https://github.com/redis/redis/archive/6.2-rc2.tar.gz
+
+make distclean
+make BUILD_TLS=yes
+make install
+
+
+
+Endpoint: clustercfg.location-driver-cluster-prod.0cfwbf.apse1.cache.amazonaws.com
+ 
+beLocationServiceReadId
+	
+3zmoBK100rABL7aA
+
+
+Install docker in WSL2
+
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+sudo service docker start
+
+Refer: https://docs.docker.com/engine/install/ubuntu/
